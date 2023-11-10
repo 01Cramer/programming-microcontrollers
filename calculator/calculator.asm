@@ -40,7 +40,7 @@ PLUS:
     CJNE A,#10,STAR
     MOV A, #'+'
     LCALL WRITE_DATA
-    LJMP ADD
+    LJMP ADDITION
     RET
 
 STAR:
@@ -64,7 +64,7 @@ COLON:
     LJMP DIVISION
     RET
 
-ADD:
+ADDITION:
     LCALL WAIT_KEY
     MOV R1, A ; In R1 second value
     LCALL INPUT_BCD
